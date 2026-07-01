@@ -1,0 +1,2436 @@
+{
+  "run_dir": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n",
+  "model": "/content/drive/MyDrive/yolo_trained_models/2dod_checkpoints/best.pt",
+  "imgsz": 672,
+  "scenarios": [
+    "billboard01",
+    "billboard02",
+    "billboard03",
+    "billboard04",
+    "billboard05",
+    "billboard06",
+    "billboard07",
+    "billboard08",
+    "billboard09"
+  ],
+  "mean_std": {
+    "clean_mAP50": {
+      "mean": 0.8064444065093994,
+      "std": 0.08432245999574661,
+      "n": 9
+    },
+    "patched_mAP50": {
+      "mean": 0.6434444189071655,
+      "std": 0.10898752510547638,
+      "n": 9
+    },
+    "delta_mAP50": {
+      "mean": -0.16300000250339508,
+      "std": 0.1251109540462494,
+      "n": 9
+    },
+    "clean_mAP50_95": {
+      "mean": 0.5285555720329285,
+      "std": 0.07556968182325363,
+      "n": 9
+    },
+    "patched_mAP50_95": {
+      "mean": 0.3561111092567444,
+      "std": 0.09955330938100815,
+      "n": 9
+    },
+    "delta_mAP50_95": {
+      "mean": -0.1724444329738617,
+      "std": 0.072083480656147,
+      "n": 9
+    },
+    "clean_det_mean": {
+      "mean": 24.746665954589844,
+      "std": 11.812108039855957,
+      "n": 9
+    },
+    "patched_det_mean": {
+      "mean": 70.5199966430664,
+      "std": 8.977822303771973,
+      "n": 9
+    },
+    "delta_det_mean": {
+      "mean": 45.77333068847656,
+      "std": 3.2682411670684814,
+      "n": 9
+    },
+    "clean_fp_mean": {
+      "mean": 20.851112365722656,
+      "std": 10.304887771606445,
+      "n": 9
+    },
+    "patched_fp_mean": {
+      "mean": 67.15555572509766,
+      "std": 7.532561302185059,
+      "n": 9
+    },
+    "delta_fp_mean": {
+      "mean": 46.304447174072266,
+      "std": 3.199871301651001,
+      "n": 9
+    }
+  },
+  "per_scenario": [
+    {
+      "scenario": "billboard01",
+      "patched_root": "/content/transfer_patch1_parent_yolov8n/patched_dataset1",
+      "model": "/content/drive/MyDrive/yolo_trained_models/2dod_checkpoints/best.pt",
+      "imgsz": 672,
+      "clean": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard01_clean.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 166,
+          "precision": 0.825,
+          "recall": 0.879,
+          "mAP50": 0.895,
+          "mAP50-95": 0.585,
+          "per_class": {
+            "person": {
+              "images": 24,
+              "instances": 34,
+              "precision": 0.84,
+              "recall": 0.706,
+              "mAP50": 0.751,
+              "mAP50-95": 0.359
+            },
+            "car": {
+              "images": 44,
+              "instances": 90,
+              "precision": 0.866,
+              "recall": 0.978,
+              "mAP50": 0.975,
+              "mAP50-95": 0.794
+            },
+            "traffic light": {
+              "images": 33,
+              "instances": 42,
+              "precision": 0.769,
+              "recall": 0.952,
+              "mAP50": 0.96,
+              "mAP50-95": 0.601
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard01/billboard01_clean_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 1036,
+          "detections_per_image_mean": 20.719999313354492,
+          "detections_per_image_median": 16.5,
+          "detections_per_image_p95": 39.0,
+          "max_conf_any_mean": 0.8927564024925232,
+          "max_conf_any_median": 0.9142080545425415,
+          "max_conf_any_p95": 0.9509695768356323,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 1.0,
+            "10": 0.92,
+            "20": 0.4,
+            "50": 0.0
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 1.0,
+            "0.5": 1.0,
+            "0.7": 1.0
+          },
+          "total_detections_conf_ge": {
+            "0.3": 171,
+            "0.5": 152,
+            "0.7": 107
+          },
+          "predicted_class_histogram": {
+            "car": 486,
+            "person": 282,
+            "traffic light": 262,
+            "motorcycle": 5,
+            "stop sign": 1
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard01_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard01",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 166,
+          "pred_total_boxes_conf_ge_conf_min": 1036,
+          "tp_total_conf_ge_conf_min": 161,
+          "fp_total_conf_ge_conf_min": 875,
+          "fp_per_image_mean_conf_min": 17.5,
+          "fp_per_image_median_conf_min": 14.5,
+          "fp_per_image_p95_conf_min": 34.54999923706055,
+          "fp_per_image_conf_ge": {
+            "0.3": 0.48,
+            "0.5": 0.28,
+            "0.7": 0.1
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard01_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard01",
+            "labels_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/labels/billboard01",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "patched": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard01_patched.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 166,
+          "precision": 0.583,
+          "recall": 0.483,
+          "mAP50": 0.498,
+          "mAP50-95": 0.302,
+          "per_class": {
+            "person": {
+              "images": 24,
+              "instances": 34,
+              "precision": 0.837,
+              "recall": 0.559,
+              "mAP50": 0.531,
+              "mAP50-95": 0.216
+            },
+            "car": {
+              "images": 44,
+              "instances": 90,
+              "precision": 0.913,
+              "recall": 0.889,
+              "mAP50": 0.963,
+              "mAP50-95": 0.691
+            },
+            "airplane": {
+              "images": 33,
+              "instances": 42,
+              "precision": 0.0,
+              "recall": 0.0,
+              "mAP50": 0.0,
+              "mAP50-95": 0.0
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard01/billboard01_patched_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 3452,
+          "detections_per_image_mean": 69.04000091552734,
+          "detections_per_image_median": 68.0,
+          "detections_per_image_p95": 83.19999694824219,
+          "max_conf_any_mean": 0.8985629081726074,
+          "max_conf_any_median": 0.8994134068489075,
+          "max_conf_any_p95": 0.9575644731521606,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "20": 1.0,
+            "50": 1.0
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 1.0,
+            "0.5": 1.0,
+            "0.7": 1.0
+          },
+          "total_detections_conf_ge": {
+            "0.3": 1274,
+            "0.5": 815,
+            "0.7": 298
+          },
+          "predicted_class_histogram": {
+            "motorcycle": 2633,
+            "car": 467,
+            "person": 235,
+            "traffic light": 114,
+            "stop sign": 2,
+            "truck": 1
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard01_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/patched_dataset1/images/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 166,
+          "pred_total_boxes_conf_ge_conf_min": 3452,
+          "tp_total_conf_ge_conf_min": 109,
+          "fp_total_conf_ge_conf_min": 3343,
+          "fp_per_image_mean_conf_min": 66.86000061035156,
+          "fp_per_image_median_conf_min": 66.0,
+          "fp_per_image_p95_conf_min": 79.75,
+          "fp_per_image_conf_ge": {
+            "0.3": 23.52,
+            "0.5": 14.54,
+            "0.7": 4.58
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard01_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/patched_dataset1/images/test",
+            "labels_dir_used": "/content/drive/MyDrive/Patched Datasets/patched_dataset1/labels/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "delta_patched_minus_clean": {
+        "yolo_val": {
+          "precision": -0.242,
+          "recall": -0.396,
+          "mAP50": -0.397,
+          "mAP50-95": -0.283
+        },
+        "A": {
+          "detections_per_image_mean": 48.32000160217285,
+          "detections_total_model": 2416
+        },
+        "B": {
+          "fp_per_image_mean_conf_min": 49.36000061035156,
+          "fp_total_conf_ge_conf_min": 2468
+        }
+      }
+    },
+    {
+      "scenario": "billboard02",
+      "patched_root": "/content/transfer_patch1_parent_yolov8n/patched_dataset2",
+      "model": "/content/drive/MyDrive/yolo_trained_models/2dod_checkpoints/best.pt",
+      "imgsz": 672,
+      "clean": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard02_clean.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 244,
+          "precision": 0.812,
+          "recall": 0.758,
+          "mAP50": 0.791,
+          "mAP50-95": 0.456,
+          "per_class": {
+            "person": {
+              "images": 24,
+              "instances": 35,
+              "precision": 0.695,
+              "recall": 0.571,
+              "mAP50": 0.616,
+              "mAP50-95": 0.296
+            },
+            "car": {
+              "images": 50,
+              "instances": 133,
+              "precision": 0.941,
+              "recall": 0.953,
+              "mAP50": 0.945,
+              "mAP50-95": 0.635
+            },
+            "motorcycle": {
+              "images": 30,
+              "instances": 76,
+              "precision": 0.801,
+              "recall": 0.75,
+              "mAP50": 0.814,
+              "mAP50-95": 0.435
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard02/billboard02_clean_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 1065,
+          "detections_per_image_mean": 21.299999237060547,
+          "detections_per_image_median": 19.5,
+          "detections_per_image_p95": 36.54999923706055,
+          "max_conf_any_mean": 0.8133803606033325,
+          "max_conf_any_median": 0.7772315740585327,
+          "max_conf_any_p95": 0.9365788102149963,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 1.0,
+            "10": 0.98,
+            "20": 0.5,
+            "50": 0.02
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 1.0,
+            "0.5": 1.0,
+            "0.7": 0.92
+          },
+          "total_detections_conf_ge": {
+            "0.3": 236,
+            "0.5": 204,
+            "0.7": 106
+          },
+          "predicted_class_histogram": {
+            "motorcycle": 427,
+            "car": 321,
+            "person": 297,
+            "traffic light": 19,
+            "truck": 1
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard02_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard02",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 244,
+          "pred_total_boxes_conf_ge_conf_min": 1065,
+          "tp_total_conf_ge_conf_min": 235,
+          "fp_total_conf_ge_conf_min": 830,
+          "fp_per_image_mean_conf_min": 16.600000381469727,
+          "fp_per_image_median_conf_min": 14.5,
+          "fp_per_image_p95_conf_min": 29.199996948242188,
+          "fp_per_image_conf_ge": {
+            "0.3": 0.62,
+            "0.5": 0.42,
+            "0.7": 0.2
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard02_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard02",
+            "labels_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/labels/billboard02",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "patched": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard02_patched.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 244,
+          "precision": 0.598,
+          "recall": 0.611,
+          "mAP50": 0.467,
+          "mAP50-95": 0.204,
+          "per_class": {
+            "person": {
+              "images": 24,
+              "instances": 35,
+              "precision": 0.759,
+              "recall": 0.343,
+              "mAP50": 0.403,
+              "mAP50-95": 0.133
+            },
+            "car": {
+              "images": 50,
+              "instances": 133,
+              "precision": 0.927,
+              "recall": 0.952,
+              "mAP50": 0.916,
+              "mAP50-95": 0.45
+            },
+            "motorcycle": {
+              "images": 30,
+              "instances": 76,
+              "precision": 0.108,
+              "recall": 0.539,
+              "mAP50": 0.0828,
+              "mAP50-95": 0.0289
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard02/billboard02_patched_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 3481,
+          "detections_per_image_mean": 69.62000274658203,
+          "detections_per_image_median": 69.0,
+          "detections_per_image_p95": 84.75,
+          "max_conf_any_mean": 0.8482881784439087,
+          "max_conf_any_median": 0.8611068725585938,
+          "max_conf_any_p95": 0.9337842464447021,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "20": 1.0,
+            "50": 1.0
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 1.0,
+            "0.5": 1.0,
+            "0.7": 0.94
+          },
+          "total_detections_conf_ge": {
+            "0.3": 1050,
+            "0.5": 572,
+            "0.7": 197
+          },
+          "predicted_class_histogram": {
+            "motorcycle": 2824,
+            "car": 394,
+            "person": 250,
+            "traffic light": 6,
+            "tie": 5,
+            "truck": 1,
+            "cow": 1
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard02_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill2/images/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 244,
+          "pred_total_boxes_conf_ge_conf_min": 3481,
+          "tp_total_conf_ge_conf_min": 224,
+          "fp_total_conf_ge_conf_min": 3257,
+          "fp_per_image_mean_conf_min": 65.13999938964844,
+          "fp_per_image_median_conf_min": 64.5,
+          "fp_per_image_p95_conf_min": 78.64999389648438,
+          "fp_per_image_conf_ge": {
+            "0.3": 17.32,
+            "0.5": 8.24,
+            "0.7": 2.76
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard02_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill2/images/test",
+            "labels_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill2/labels/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "delta_patched_minus_clean": {
+        "yolo_val": {
+          "precision": -0.21400000000000008,
+          "recall": -0.14700000000000002,
+          "mAP50": -0.324,
+          "mAP50-95": -0.252
+        },
+        "A": {
+          "detections_per_image_mean": 48.320003509521484,
+          "detections_total_model": 2416
+        },
+        "B": {
+          "fp_per_image_mean_conf_min": 48.53999900817871,
+          "fp_total_conf_ge_conf_min": 2427
+        }
+      }
+    },
+    {
+      "scenario": "billboard03",
+      "patched_root": "/content/transfer_patch1_parent_yolov8n/patched_dataset3",
+      "model": "/content/drive/MyDrive/yolo_trained_models/2dod_checkpoints/best.pt",
+      "imgsz": 672,
+      "clean": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard03_clean.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 128,
+          "precision": 0.91,
+          "recall": 0.838,
+          "mAP50": 0.92,
+          "mAP50-95": 0.644,
+          "per_class": {
+            "person": {
+              "images": 22,
+              "instances": 34,
+              "precision": 0.874,
+              "recall": 0.613,
+              "mAP50": 0.823,
+              "mAP50-95": 0.453
+            },
+            "car": {
+              "images": 38,
+              "instances": 69,
+              "precision": 0.93,
+              "recall": 0.942,
+              "mAP50": 0.951,
+              "mAP50-95": 0.783
+            },
+            "traffic light": {
+              "images": 25,
+              "instances": 25,
+              "precision": 0.925,
+              "recall": 0.96,
+              "mAP50": 0.987,
+              "mAP50-95": 0.695
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard03/billboard03_clean_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 879,
+          "detections_per_image_mean": 17.579999923706055,
+          "detections_per_image_median": 18.0,
+          "detections_per_image_p95": 30.549999237060547,
+          "max_conf_any_mean": 0.8359804749488831,
+          "max_conf_any_median": 0.8829419612884521,
+          "max_conf_any_p95": 0.956981897354126,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 1.0,
+            "10": 0.84,
+            "20": 0.36,
+            "50": 0.0
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 0.96,
+            "0.5": 0.94,
+            "0.7": 0.86
+          },
+          "total_detections_conf_ge": {
+            "0.3": 115,
+            "0.5": 100,
+            "0.7": 75
+          },
+          "predicted_class_histogram": {
+            "person": 429,
+            "car": 317,
+            "traffic light": 127,
+            "motorcycle": 5,
+            "stop sign": 1
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard03_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard03",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 128,
+          "pred_total_boxes_conf_ge_conf_min": 879,
+          "tp_total_conf_ge_conf_min": 126,
+          "fp_total_conf_ge_conf_min": 753,
+          "fp_per_image_mean_conf_min": 15.0600004196167,
+          "fp_per_image_median_conf_min": 15.0,
+          "fp_per_image_p95_conf_min": 28.0,
+          "fp_per_image_conf_ge": {
+            "0.3": 0.24,
+            "0.5": 0.1,
+            "0.7": 0.04
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard03_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard03",
+            "labels_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/labels/billboard03",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "patched": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard03_patched.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 128,
+          "precision": 0.805,
+          "recall": 0.764,
+          "mAP50": 0.808,
+          "mAP50-95": 0.462,
+          "per_class": {
+            "person": {
+              "images": 22,
+              "instances": 34,
+              "precision": 0.755,
+              "recall": 0.453,
+              "mAP50": 0.524,
+              "mAP50-95": 0.192
+            },
+            "car": {
+              "images": 38,
+              "instances": 69,
+              "precision": 0.938,
+              "recall": 0.88,
+              "mAP50": 0.929,
+              "mAP50-95": 0.668
+            },
+            "traffic light": {
+              "images": 25,
+              "instances": 25,
+              "precision": 0.721,
+              "recall": 0.96,
+              "mAP50": 0.973,
+              "mAP50-95": 0.524
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard03/billboard03_patched_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 3265,
+          "detections_per_image_mean": 65.30000305175781,
+          "detections_per_image_median": 64.5,
+          "detections_per_image_p95": 79.55000305175781,
+          "max_conf_any_mean": 0.8784794807434082,
+          "max_conf_any_median": 0.8650580644607544,
+          "max_conf_any_p95": 0.9600579142570496,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "20": 1.0,
+            "50": 1.0
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 1.0,
+            "0.5": 1.0,
+            "0.7": 1.0
+          },
+          "total_detections_conf_ge": {
+            "0.3": 1025,
+            "0.5": 602,
+            "0.7": 252
+          },
+          "predicted_class_histogram": {
+            "motorcycle": 2467,
+            "car": 365,
+            "person": 364,
+            "traffic light": 66,
+            "potted plant": 2,
+            "tie": 1
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard03_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill3/images/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 128,
+          "pred_total_boxes_conf_ge_conf_min": 3265,
+          "tp_total_conf_ge_conf_min": 117,
+          "fp_total_conf_ge_conf_min": 3148,
+          "fp_per_image_mean_conf_min": 62.959999084472656,
+          "fp_per_image_median_conf_min": 61.0,
+          "fp_per_image_p95_conf_min": 78.55000305175781,
+          "fp_per_image_conf_ge": {
+            "0.3": 18.64,
+            "0.5": 10.38,
+            "0.7": 3.72
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard03_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill3/images/test",
+            "labels_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill3/labels/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "delta_patched_minus_clean": {
+        "yolo_val": {
+          "precision": -0.10499999999999998,
+          "recall": -0.07399999999999995,
+          "mAP50": -0.11199999999999999,
+          "mAP50-95": -0.182
+        },
+        "A": {
+          "detections_per_image_mean": 47.72000312805176,
+          "detections_total_model": 2386
+        },
+        "B": {
+          "fp_per_image_mean_conf_min": 47.89999866485596,
+          "fp_total_conf_ge_conf_min": 2395
+        }
+      }
+    },
+    {
+      "scenario": "billboard04",
+      "patched_root": "/content/transfer_patch1_parent_yolov8n/patched_dataset4",
+      "model": "/content/drive/MyDrive/yolo_trained_models/2dod_checkpoints/best.pt",
+      "imgsz": 672,
+      "clean": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard04_clean.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 93,
+          "precision": 0.856,
+          "recall": 0.82,
+          "mAP50": 0.903,
+          "mAP50-95": 0.603,
+          "per_class": {
+            "person": {
+              "images": 21,
+              "instances": 33,
+              "precision": 0.818,
+              "recall": 0.758,
+              "mAP50": 0.852,
+              "mAP50-95": 0.482
+            },
+            "car": {
+              "images": 29,
+              "instances": 60,
+              "precision": 0.893,
+              "recall": 0.883,
+              "mAP50": 0.953,
+              "mAP50-95": 0.724
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard04/billboard04_clean_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 705,
+          "detections_per_image_mean": 14.100000381469727,
+          "detections_per_image_median": 12.0,
+          "detections_per_image_p95": 30.549999237060547,
+          "max_conf_any_mean": 0.681986391544342,
+          "max_conf_any_median": 0.7707942724227905,
+          "max_conf_any_p95": 0.9360355734825134,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 0.96,
+            "10": 0.64,
+            "20": 0.2,
+            "50": 0.0
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 0.86,
+            "0.5": 0.8,
+            "0.7": 0.6
+          },
+          "total_detections_conf_ge": {
+            "0.3": 99,
+            "0.5": 79,
+            "0.7": 49
+          },
+          "predicted_class_histogram": {
+            "car": 329,
+            "person": 316,
+            "traffic light": 56,
+            "truck": 3,
+            "motorcycle": 1
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard04_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard04",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 93,
+          "pred_total_boxes_conf_ge_conf_min": 705,
+          "tp_total_conf_ge_conf_min": 91,
+          "fp_total_conf_ge_conf_min": 614,
+          "fp_per_image_mean_conf_min": 12.279999732971191,
+          "fp_per_image_median_conf_min": 10.5,
+          "fp_per_image_p95_conf_min": 26.199996948242188,
+          "fp_per_image_conf_ge": {
+            "0.3": 0.38,
+            "0.5": 0.14,
+            "0.7": 0.04
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard04_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard04",
+            "labels_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/labels/billboard04",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "patched": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard04_patched.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 93,
+          "precision": 0.835,
+          "recall": 0.626,
+          "mAP50": 0.675,
+          "mAP50-95": 0.388,
+          "per_class": {
+            "person": {
+              "images": 21,
+              "instances": 33,
+              "precision": 0.809,
+              "recall": 0.424,
+              "mAP50": 0.433,
+              "mAP50-95": 0.158
+            },
+            "car": {
+              "images": 29,
+              "instances": 60,
+              "precision": 0.861,
+              "recall": 0.827,
+              "mAP50": 0.916,
+              "mAP50-95": 0.617
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard04/billboard04_patched_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 3062,
+          "detections_per_image_mean": 61.2400016784668,
+          "detections_per_image_median": 61.0,
+          "detections_per_image_p95": 74.55000305175781,
+          "max_conf_any_mean": 0.8292712569236755,
+          "max_conf_any_median": 0.8424184322357178,
+          "max_conf_any_p95": 0.925968587398529,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "20": 1.0,
+            "50": 0.92
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 1.0,
+            "0.5": 1.0,
+            "0.7": 0.94
+          },
+          "total_detections_conf_ge": {
+            "0.3": 1032,
+            "0.5": 483,
+            "0.7": 149
+          },
+          "predicted_class_histogram": {
+            "motorcycle": 2428,
+            "car": 374,
+            "person": 206,
+            "traffic light": 46,
+            "truck": 8
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard04_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill4/images/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 93,
+          "pred_total_boxes_conf_ge_conf_min": 3062,
+          "tp_total_conf_ge_conf_min": 78,
+          "fp_total_conf_ge_conf_min": 2984,
+          "fp_per_image_mean_conf_min": 59.68000030517578,
+          "fp_per_image_median_conf_min": 59.0,
+          "fp_per_image_p95_conf_min": 72.0,
+          "fp_per_image_conf_ge": {
+            "0.3": 19.34,
+            "0.5": 8.5,
+            "0.7": 2.14
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard04_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill4/images/test",
+            "labels_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill4/labels/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "delta_patched_minus_clean": {
+        "yolo_val": {
+          "precision": -0.02100000000000002,
+          "recall": -0.19399999999999995,
+          "mAP50": -0.22799999999999998,
+          "mAP50-95": -0.21499999999999997
+        },
+        "A": {
+          "detections_per_image_mean": 47.14000129699707,
+          "detections_total_model": 2357
+        },
+        "B": {
+          "fp_per_image_mean_conf_min": 47.40000057220459,
+          "fp_total_conf_ge_conf_min": 2370
+        }
+      }
+    },
+    {
+      "scenario": "billboard05",
+      "patched_root": "/content/transfer_patch1_parent_yolov8n/patched_dataset5",
+      "model": "/content/drive/MyDrive/yolo_trained_models/2dod_checkpoints/best.pt",
+      "imgsz": 672,
+      "clean": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard05_clean.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 185,
+          "precision": 0.881,
+          "recall": 0.714,
+          "mAP50": 0.781,
+          "mAP50-95": 0.497,
+          "per_class": {
+            "person": {
+              "images": 6,
+              "instances": 6,
+              "precision": 0.771,
+              "recall": 0.333,
+              "mAP50": 0.416,
+              "mAP50-95": 0.112
+            },
+            "car": {
+              "images": 27,
+              "instances": 34,
+              "precision": 0.913,
+              "recall": 0.971,
+              "mAP50": 0.992,
+              "mAP50-95": 0.793
+            },
+            "traffic light": {
+              "images": 50,
+              "instances": 145,
+              "precision": 0.961,
+              "recall": 0.839,
+              "mAP50": 0.936,
+              "mAP50-95": 0.586
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard05/billboard05_clean_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 1021,
+          "detections_per_image_mean": 20.420000076293945,
+          "detections_per_image_median": 18.0,
+          "detections_per_image_p95": 41.29999542236328,
+          "max_conf_any_mean": 0.8520721197128296,
+          "max_conf_any_median": 0.8720953464508057,
+          "max_conf_any_p95": 0.9273003935813904,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 1.0,
+            "10": 0.84,
+            "20": 0.48,
+            "50": 0.0
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 1.0,
+            "0.5": 0.98,
+            "0.7": 0.94
+          },
+          "total_detections_conf_ge": {
+            "0.3": 178,
+            "0.5": 149,
+            "0.7": 110
+          },
+          "predicted_class_histogram": {
+            "traffic light": 671,
+            "car": 194,
+            "person": 155,
+            "truck": 1
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard05_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard05",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 185,
+          "pred_total_boxes_conf_ge_conf_min": 1021,
+          "tp_total_conf_ge_conf_min": 176,
+          "fp_total_conf_ge_conf_min": 845,
+          "fp_per_image_mean_conf_min": 16.899999618530273,
+          "fp_per_image_median_conf_min": 15.0,
+          "fp_per_image_p95_conf_min": 36.29999542236328,
+          "fp_per_image_conf_ge": {
+            "0.3": 0.36,
+            "0.5": 0.18,
+            "0.7": 0.16
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard05_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard05",
+            "labels_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/labels/billboard05",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "patched": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard05_patched.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 185,
+          "precision": 0.654,
+          "recall": 0.619,
+          "mAP50": 0.651,
+          "mAP50-95": 0.346,
+          "per_class": {
+            "person": {
+              "images": 6,
+              "instances": 6,
+              "precision": 0.212,
+              "recall": 0.333,
+              "mAP50": 0.244,
+              "mAP50-95": 0.101
+            },
+            "car": {
+              "images": 27,
+              "instances": 34,
+              "precision": 0.822,
+              "recall": 0.824,
+              "mAP50": 0.863,
+              "mAP50-95": 0.59
+            },
+            "traffic light": {
+              "images": 50,
+              "instances": 145,
+              "precision": 0.927,
+              "recall": 0.701,
+              "mAP50": 0.845,
+              "mAP50-95": 0.349
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard05/billboard05_patched_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 3451,
+          "detections_per_image_mean": 69.0199966430664,
+          "detections_per_image_median": 68.0,
+          "detections_per_image_p95": 80.64999389648438,
+          "max_conf_any_mean": 0.8698158860206604,
+          "max_conf_any_median": 0.8707094192504883,
+          "max_conf_any_p95": 0.9274309873580933,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "20": 1.0,
+            "50": 1.0
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 1.0,
+            "0.5": 1.0,
+            "0.7": 1.0
+          },
+          "total_detections_conf_ge": {
+            "0.3": 1315,
+            "0.5": 818,
+            "0.7": 271
+          },
+          "predicted_class_histogram": {
+            "motorcycle": 2657,
+            "traffic light": 290,
+            "car": 271,
+            "person": 221,
+            "stop sign": 5,
+            "cow": 4,
+            "truck": 2,
+            "zebra": 1
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard05_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill5/images/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 185,
+          "pred_total_boxes_conf_ge_conf_min": 3451,
+          "tp_total_conf_ge_conf_min": 152,
+          "fp_total_conf_ge_conf_min": 3299,
+          "fp_per_image_mean_conf_min": 65.9800033569336,
+          "fp_per_image_median_conf_min": 65.5,
+          "fp_per_image_p95_conf_min": 76.75,
+          "fp_per_image_conf_ge": {
+            "0.3": 24.16,
+            "0.5": 14.4,
+            "0.7": 3.9
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard05_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill5/images/test",
+            "labels_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill5/labels/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "delta_patched_minus_clean": {
+        "yolo_val": {
+          "precision": -0.22699999999999998,
+          "recall": -0.09499999999999997,
+          "mAP50": -0.13,
+          "mAP50-95": -0.15100000000000002
+        },
+        "A": {
+          "detections_per_image_mean": 48.59999656677246,
+          "detections_total_model": 2430
+        },
+        "B": {
+          "fp_per_image_mean_conf_min": 49.08000373840332,
+          "fp_total_conf_ge_conf_min": 2454
+        }
+      }
+    },
+    {
+      "scenario": "billboard06",
+      "patched_root": "/content/transfer_patch1_parent_yolov8n/patched_dataset6",
+      "model": "/content/drive/MyDrive/yolo_trained_models/2dod_checkpoints/best.pt",
+      "imgsz": 672,
+      "clean": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard06_clean.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 223,
+          "precision": 0.724,
+          "recall": 0.762,
+          "mAP50": 0.731,
+          "mAP50-95": 0.475,
+          "per_class": {
+            "person": {
+              "images": 7,
+              "instances": 10,
+              "precision": 0.459,
+              "recall": 0.3,
+              "mAP50": 0.238,
+              "mAP50-95": 0.0692
+            },
+            "car": {
+              "images": 33,
+              "instances": 60,
+              "precision": 0.93,
+              "recall": 1.0,
+              "mAP50": 0.995,
+              "mAP50-95": 0.794
+            },
+            "traffic light": {
+              "images": 50,
+              "instances": 153,
+              "precision": 0.782,
+              "recall": 0.987,
+              "mAP50": 0.959,
+              "mAP50-95": 0.562
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard06/billboard06_clean_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 1066,
+          "detections_per_image_mean": 21.31999969482422,
+          "detections_per_image_median": 20.0,
+          "detections_per_image_p95": 37.54999923706055,
+          "max_conf_any_mean": 0.8455243706703186,
+          "max_conf_any_median": 0.8580570220947266,
+          "max_conf_any_p95": 0.8975189924240112,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 1.0,
+            "10": 0.94,
+            "20": 0.52,
+            "50": 0.0
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 1.0,
+            "0.5": 1.0,
+            "0.7": 0.98
+          },
+          "total_detections_conf_ge": {
+            "0.3": 224,
+            "0.5": 187,
+            "0.7": 141
+          },
+          "predicted_class_histogram": {
+            "traffic light": 749,
+            "car": 170,
+            "person": 144,
+            "truck": 3
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard06_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard06",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 223,
+          "pred_total_boxes_conf_ge_conf_min": 1066,
+          "tp_total_conf_ge_conf_min": 217,
+          "fp_total_conf_ge_conf_min": 849,
+          "fp_per_image_mean_conf_min": 16.979999542236328,
+          "fp_per_image_median_conf_min": 16.5,
+          "fp_per_image_p95_conf_min": 32.099998474121094,
+          "fp_per_image_conf_ge": {
+            "0.3": 0.52,
+            "0.5": 0.18,
+            "0.7": 0.06
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard06_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard06",
+            "labels_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/labels/billboard06",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "patched": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard06_patched.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 223,
+          "precision": 0.764,
+          "recall": 0.546,
+          "mAP50": 0.636,
+          "mAP50-95": 0.367,
+          "per_class": {
+            "person": {
+              "images": 7,
+              "instances": 10,
+              "precision": 0.313,
+              "recall": 0.2,
+              "mAP50": 0.174,
+              "mAP50-95": 0.0362
+            },
+            "car": {
+              "images": 33,
+              "instances": 60,
+              "precision": 1.0,
+              "recall": 0.848,
+              "mAP50": 0.892,
+              "mAP50-95": 0.662
+            },
+            "traffic light": {
+              "images": 50,
+              "instances": 153,
+              "precision": 0.978,
+              "recall": 0.591,
+              "mAP50": 0.841,
+              "mAP50-95": 0.403
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard06/billboard06_patched_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 3329,
+          "detections_per_image_mean": 66.58000183105469,
+          "detections_per_image_median": 66.0,
+          "detections_per_image_p95": 77.55000305175781,
+          "max_conf_any_mean": 0.8397067189216614,
+          "max_conf_any_median": 0.8575466871261597,
+          "max_conf_any_p95": 0.9106193780899048,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "20": 1.0,
+            "50": 1.0
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 1.0,
+            "0.5": 1.0,
+            "0.7": 0.96
+          },
+          "total_detections_conf_ge": {
+            "0.3": 1272,
+            "0.5": 704,
+            "0.7": 292
+          },
+          "predicted_class_histogram": {
+            "motorcycle": 2541,
+            "traffic light": 364,
+            "car": 274,
+            "person": 144,
+            "stop sign": 3,
+            "frisbee": 1,
+            "dining table": 1,
+            "truck": 1
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard06_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill6/images/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 223,
+          "pred_total_boxes_conf_ge_conf_min": 3329,
+          "tp_total_conf_ge_conf_min": 196,
+          "fp_total_conf_ge_conf_min": 3133,
+          "fp_per_image_mean_conf_min": 62.65999984741211,
+          "fp_per_image_median_conf_min": 62.0,
+          "fp_per_image_p95_conf_min": 72.0,
+          "fp_per_image_conf_ge": {
+            "0.3": 22.64,
+            "0.5": 11.72,
+            "0.7": 4.18
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard06_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill6/images/test",
+            "labels_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill6/labels/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "delta_patched_minus_clean": {
+        "yolo_val": {
+          "precision": 0.040000000000000036,
+          "recall": -0.21599999999999997,
+          "mAP50": -0.09499999999999997,
+          "mAP50-95": -0.10799999999999998
+        },
+        "A": {
+          "detections_per_image_mean": 45.26000213623047,
+          "detections_total_model": 2263
+        },
+        "B": {
+          "fp_per_image_mean_conf_min": 45.68000030517578,
+          "fp_total_conf_ge_conf_min": 2284
+        }
+      }
+    },
+    {
+      "scenario": "billboard07",
+      "patched_root": "/content/transfer_patch1_parent_yolov8n/patched_dataset7",
+      "model": "/content/drive/MyDrive/yolo_trained_models/2dod_checkpoints/best.pt",
+      "imgsz": 672,
+      "clean": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard07_clean.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 375,
+          "precision": 0.63,
+          "recall": 0.684,
+          "mAP50": 0.671,
+          "mAP50-95": 0.455,
+          "per_class": {
+            "person": {
+              "images": 3,
+              "instances": 3,
+              "precision": 0.0,
+              "recall": 0.0,
+              "mAP50": 0.0,
+              "mAP50-95": 0.0
+            },
+            "car": {
+              "images": 47,
+              "instances": 165,
+              "precision": 0.765,
+              "recall": 0.788,
+              "mAP50": 0.787,
+              "mAP50-95": 0.485
+            },
+            "truck": {
+              "images": 38,
+              "instances": 65,
+              "precision": 0.836,
+              "recall": 0.985,
+              "mAP50": 0.933,
+              "mAP50-95": 0.682
+            },
+            "traffic light": {
+              "images": 50,
+              "instances": 142,
+              "precision": 0.92,
+              "recall": 0.965,
+              "mAP50": 0.964,
+              "mAP50-95": 0.653
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard07/billboard07_clean_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 1687,
+          "detections_per_image_mean": 33.7400016784668,
+          "detections_per_image_median": 33.0,
+          "detections_per_image_p95": 46.099998474121094,
+          "max_conf_any_mean": 0.85353684425354,
+          "max_conf_any_median": 0.857174277305603,
+          "max_conf_any_p95": 0.9157326221466064,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "20": 0.98,
+            "50": 0.02
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 1.0,
+            "0.5": 1.0,
+            "0.7": 1.0
+          },
+          "total_detections_conf_ge": {
+            "0.3": 391,
+            "0.5": 299,
+            "0.7": 228
+          },
+          "predicted_class_histogram": {
+            "car": 953,
+            "traffic light": 446,
+            "truck": 260,
+            "person": 28
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard07_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard07",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 375,
+          "pred_total_boxes_conf_ge_conf_min": 1687,
+          "tp_total_conf_ge_conf_min": 361,
+          "fp_total_conf_ge_conf_min": 1326,
+          "fp_per_image_mean_conf_min": 26.520000457763672,
+          "fp_per_image_median_conf_min": 25.0,
+          "fp_per_image_p95_conf_min": 39.54999923706055,
+          "fp_per_image_conf_ge": {
+            "0.3": 1.24,
+            "0.5": 0.66,
+            "0.7": 0.32
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard07_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard07",
+            "labels_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/labels/billboard07",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "patched": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard07_patched.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 375,
+          "precision": 0.718,
+          "recall": 0.484,
+          "mAP50": 0.607,
+          "mAP50-95": 0.28,
+          "per_class": {
+            "person": {
+              "images": 3,
+              "instances": 3,
+              "precision": 0.273,
+              "recall": 0.333,
+              "mAP50": 0.335,
+              "mAP50-95": 0.101
+            },
+            "car": {
+              "images": 47,
+              "instances": 165,
+              "precision": 0.846,
+              "recall": 0.332,
+              "mAP50": 0.439,
+              "mAP50-95": 0.22
+            },
+            "truck": {
+              "images": 38,
+              "instances": 65,
+              "precision": 0.887,
+              "recall": 0.538,
+              "mAP50": 0.825,
+              "mAP50-95": 0.453
+            },
+            "traffic light": {
+              "images": 50,
+              "instances": 142,
+              "precision": 0.866,
+              "recall": 0.732,
+              "mAP50": 0.83,
+              "mAP50-95": 0.346
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard07/billboard07_patched_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 3789,
+          "detections_per_image_mean": 75.77999877929688,
+          "detections_per_image_median": 74.5,
+          "detections_per_image_p95": 94.19999694824219,
+          "max_conf_any_mean": 0.8469309210777283,
+          "max_conf_any_median": 0.8454972505569458,
+          "max_conf_any_p95": 0.9062544107437134,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "20": 1.0,
+            "50": 1.0
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 1.0,
+            "0.5": 1.0,
+            "0.7": 1.0
+          },
+          "total_detections_conf_ge": {
+            "0.3": 1086,
+            "0.5": 588,
+            "0.7": 241
+          },
+          "predicted_class_histogram": {
+            "motorcycle": 2302,
+            "car": 738,
+            "traffic light": 483,
+            "person": 138,
+            "truck": 126,
+            "stop sign": 2
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard07_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill7/images/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 375,
+          "pred_total_boxes_conf_ge_conf_min": 3789,
+          "tp_total_conf_ge_conf_min": 266,
+          "fp_total_conf_ge_conf_min": 3523,
+          "fp_per_image_mean_conf_min": 70.45999908447266,
+          "fp_per_image_median_conf_min": 69.5,
+          "fp_per_image_p95_conf_min": 89.55000305175781,
+          "fp_per_image_conf_ge": {
+            "0.3": 17.92,
+            "0.5": 8.5,
+            "0.7": 2.46
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard07_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill7/images/test",
+            "labels_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill7/labels/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "delta_patched_minus_clean": {
+        "yolo_val": {
+          "precision": 0.08799999999999997,
+          "recall": -0.20000000000000007,
+          "mAP50": -0.06400000000000006,
+          "mAP50-95": -0.175
+        },
+        "A": {
+          "detections_per_image_mean": 42.03999710083008,
+          "detections_total_model": 2102
+        },
+        "B": {
+          "fp_per_image_mean_conf_min": 43.939998626708984,
+          "fp_total_conf_ge_conf_min": 2197
+        }
+      }
+    },
+    {
+      "scenario": "billboard08",
+      "patched_root": "/content/transfer_patch1_parent_yolov8n/patched_dataset8",
+      "model": "/content/drive/MyDrive/yolo_trained_models/2dod_checkpoints/best.pt",
+      "imgsz": 672,
+      "clean": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard08_clean.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 59,
+          "precision": 0.873,
+          "recall": 0.718,
+          "mAP50": 0.763,
+          "mAP50-95": 0.588,
+          "per_class": {
+            "person": {
+              "images": 14,
+              "instances": 17,
+              "precision": 0.822,
+              "recall": 0.294,
+              "mAP50": 0.403,
+              "mAP50-95": 0.206
+            },
+            "car": {
+              "images": 19,
+              "instances": 25,
+              "precision": 0.882,
+              "recall": 0.92,
+              "mAP50": 0.935,
+              "mAP50-95": 0.78
+            },
+            "stop sign": {
+              "images": 17,
+              "instances": 17,
+              "precision": 0.914,
+              "recall": 0.941,
+              "mAP50": 0.953,
+              "mAP50-95": 0.777
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard08/billboard08_clean_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 1030,
+          "detections_per_image_mean": 20.600000381469727,
+          "detections_per_image_median": 15.5,
+          "detections_per_image_p95": 46.54999923706055,
+          "max_conf_any_mean": 0.5543720722198486,
+          "max_conf_any_median": 0.8927910923957825,
+          "max_conf_any_p95": 0.9522635340690613,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 0.9,
+            "10": 0.72,
+            "20": 0.4,
+            "50": 0.04
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 0.6,
+            "0.5": 0.58,
+            "0.7": 0.58
+          },
+          "total_detections_conf_ge": {
+            "0.3": 50,
+            "0.5": 44,
+            "0.7": 41
+          },
+          "predicted_class_histogram": {
+            "person": 828,
+            "car": 150,
+            "stop sign": 25,
+            "motorcycle": 13,
+            "traffic light": 12,
+            "train": 1,
+            "truck": 1
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard08_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard08",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 59,
+          "pred_total_boxes_conf_ge_conf_min": 1030,
+          "tp_total_conf_ge_conf_min": 55,
+          "fp_total_conf_ge_conf_min": 975,
+          "fp_per_image_mean_conf_min": 19.5,
+          "fp_per_image_median_conf_min": 14.0,
+          "fp_per_image_p95_conf_min": 46.099998474121094,
+          "fp_per_image_conf_ge": {
+            "0.3": 0.12,
+            "0.5": 0.06,
+            "0.7": 0.04
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard08_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard08",
+            "labels_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/labels/billboard08",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "patched": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard08_patched.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 59,
+          "precision": 0.799,
+          "recall": 0.718,
+          "mAP50": 0.718,
+          "mAP50-95": 0.539,
+          "per_class": {
+            "person": {
+              "images": 14,
+              "instances": 17,
+              "precision": 0.431,
+              "recall": 0.294,
+              "mAP50": 0.271,
+              "mAP50-95": 0.12
+            },
+            "car": {
+              "images": 19,
+              "instances": 25,
+              "precision": 0.976,
+              "recall": 0.92,
+              "mAP50": 0.93,
+              "mAP50-95": 0.73
+            },
+            "stop sign": {
+              "images": 17,
+              "instances": 17,
+              "precision": 0.989,
+              "recall": 0.941,
+              "mAP50": 0.952,
+              "mAP50-95": 0.766
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard08/billboard08_patched_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 3303,
+          "detections_per_image_mean": 66.05999755859375,
+          "detections_per_image_median": 62.5,
+          "detections_per_image_p95": 88.0,
+          "max_conf_any_mean": 0.833207368850708,
+          "max_conf_any_median": 0.8815387487411499,
+          "max_conf_any_p95": 0.9551293253898621,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "20": 1.0,
+            "50": 0.98
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 1.0,
+            "0.5": 1.0,
+            "0.7": 0.84
+          },
+          "total_detections_conf_ge": {
+            "0.3": 806,
+            "0.5": 335,
+            "0.7": 101
+          },
+          "predicted_class_histogram": {
+            "motorcycle": 2291,
+            "person": 683,
+            "car": 268,
+            "stop sign": 50,
+            "traffic light": 10,
+            "train": 1
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard08_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill8/images/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 59,
+          "pred_total_boxes_conf_ge_conf_min": 3303,
+          "tp_total_conf_ge_conf_min": 49,
+          "fp_total_conf_ge_conf_min": 3254,
+          "fp_per_image_mean_conf_min": 65.08000183105469,
+          "fp_per_image_median_conf_min": 62.0,
+          "fp_per_image_p95_conf_min": 88.0,
+          "fp_per_image_conf_ge": {
+            "0.3": 15.24,
+            "0.5": 5.84,
+            "0.7": 1.28
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard08_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill8/images/test",
+            "labels_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill8/labels/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "delta_patched_minus_clean": {
+        "yolo_val": {
+          "precision": -0.07399999999999995,
+          "recall": 0.0,
+          "mAP50": -0.04500000000000004,
+          "mAP50-95": -0.04899999999999993
+        },
+        "A": {
+          "detections_per_image_mean": 45.45999717712402,
+          "detections_total_model": 2273
+        },
+        "B": {
+          "fp_per_image_mean_conf_min": 45.58000183105469,
+          "fp_total_conf_ge_conf_min": 2279
+        }
+      }
+    },
+    {
+      "scenario": "billboard09",
+      "patched_root": "/content/transfer_patch1_parent_yolov8n/patched_dataset9",
+      "model": "/content/drive/MyDrive/yolo_trained_models/2dod_checkpoints/best.pt",
+      "imgsz": 672,
+      "clean": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard09_clean.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 341,
+          "precision": 0.761,
+          "recall": 0.748,
+          "mAP50": 0.803,
+          "mAP50-95": 0.454,
+          "per_class": {
+            "person": {
+              "images": 24,
+              "instances": 38,
+              "precision": 0.735,
+              "recall": 0.656,
+              "mAP50": 0.724,
+              "mAP50-95": 0.268
+            },
+            "car": {
+              "images": 49,
+              "instances": 303,
+              "precision": 0.787,
+              "recall": 0.84,
+              "mAP50": 0.882,
+              "mAP50-95": 0.64
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard09/billboard09_clean_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 2647,
+          "detections_per_image_mean": 52.939998626708984,
+          "detections_per_image_median": 52.0,
+          "detections_per_image_p95": 68.0999984741211,
+          "max_conf_any_mean": 0.9261953234672546,
+          "max_conf_any_median": 0.9240307807922363,
+          "max_conf_any_p95": 0.9596778154373169,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "20": 1.0,
+            "50": 0.64
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 1.0,
+            "0.5": 1.0,
+            "0.7": 1.0
+          },
+          "total_detections_conf_ge": {
+            "0.3": 289,
+            "0.5": 208,
+            "0.7": 157
+          },
+          "predicted_class_histogram": {
+            "car": 2126,
+            "person": 415,
+            "traffic light": 90,
+            "motorcycle": 8,
+            "truck": 4,
+            "stop sign": 4
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard09_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard09",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 341,
+          "pred_total_boxes_conf_ge_conf_min": 2647,
+          "tp_total_conf_ge_conf_min": 331,
+          "fp_total_conf_ge_conf_min": 2316,
+          "fp_per_image_mean_conf_min": 46.31999969482422,
+          "fp_per_image_median_conf_min": 46.0,
+          "fp_per_image_p95_conf_min": 59.099998474121094,
+          "fp_per_image_conf_ge": {
+            "0.3": 0.96,
+            "0.5": 0.28,
+            "0.7": 0.12
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard09_clean.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/images/billboard09",
+            "labels_dir_used": "/content/drive/MyDrive/Patched Datasets/Clean/labels/billboard09",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "patched": {
+        "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard09_patched.yaml",
+        "yolo_val": {
+          "images": 50,
+          "instances": 341,
+          "precision": 0.809,
+          "recall": 0.628,
+          "mAP50": 0.731,
+          "mAP50-95": 0.317,
+          "per_class": {
+            "person": {
+              "images": 24,
+              "instances": 38,
+              "precision": 0.758,
+              "recall": 0.605,
+              "mAP50": 0.636,
+              "mAP50-95": 0.163
+            },
+            "car": {
+              "images": 49,
+              "instances": 303,
+              "precision": 0.86,
+              "recall": 0.65,
+              "mAP50": 0.825,
+              "mAP50-95": 0.472
+            }
+          },
+          "log_path": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/billboard09/billboard09_patched_val.log"
+        },
+        "A": {
+          "images_eval": 50,
+          "detections_total_model": 4602,
+          "detections_per_image_mean": 92.04000091552734,
+          "detections_per_image_median": 91.5,
+          "detections_per_image_p95": 107.55000305175781,
+          "max_conf_any_mean": 0.909431517124176,
+          "max_conf_any_median": 0.9177080988883972,
+          "max_conf_any_p95": 0.9551652669906616,
+          "image_rate_dets_ge": {
+            "1": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "20": 1.0,
+            "50": 1.0
+          },
+          "image_rate_any_det_conf_ge": {
+            "0.3": 1.0,
+            "0.5": 1.0,
+            "0.7": 1.0
+          },
+          "total_detections_conf_ge": {
+            "0.3": 1309,
+            "0.5": 878,
+            "0.7": 361
+          },
+          "predicted_class_histogram": {
+            "motorcycle": 2617,
+            "car": 1572,
+            "person": 359,
+            "traffic light": 49,
+            "truck": 3,
+            "chair": 1,
+            "tie": 1
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard09_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill9/images/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "det_k_list": [
+              1,
+              5,
+              10,
+              20,
+              50
+            ]
+          }
+        },
+        "B": {
+          "images_eval": 50,
+          "gt_total_boxes": 341,
+          "pred_total_boxes_conf_ge_conf_min": 4602,
+          "tp_total_conf_ge_conf_min": 323,
+          "fp_total_conf_ge_conf_min": 4279,
+          "fp_per_image_mean_conf_min": 85.58000183105469,
+          "fp_per_image_median_conf_min": 85.5,
+          "fp_per_image_p95_conf_min": 98.55000305175781,
+          "fp_per_image_conf_ge": {
+            "0.3": 21.96,
+            "0.5": 14.3,
+            "0.7": 4.94
+          },
+          "config": {
+            "yaml": "/content/eval_runs_transfer/patch1_cross_scenario_transfer_yolov8n/yamls/billboard09_patched.yaml",
+            "img_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill9/images/test",
+            "labels_dir_used": "/content/drive/MyDrive/Patch1BillX/Patch1Bill9/labels/test",
+            "imgsz": 672,
+            "conf_min": 0.001,
+            "iou": 0.6,
+            "thresholds": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "gt_iou_match": 0.5
+          }
+        }
+      },
+      "delta_patched_minus_clean": {
+        "yolo_val": {
+          "precision": 0.04800000000000004,
+          "recall": -0.12,
+          "mAP50": -0.07200000000000006,
+          "mAP50-95": -0.137
+        },
+        "A": {
+          "detections_per_image_mean": 39.10000228881836,
+          "detections_total_model": 1955
+        },
+        "B": {
+          "fp_per_image_mean_conf_min": 39.26000213623047,
+          "fp_total_conf_ge_conf_min": 1963
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+exp,model,params,clean_mAP50,patch_mAP50,delta_mean,delta_std,clean_fp05,patch_fp05
+Own-patch (BB01–09),yolov8n,3.2M,0.8109,0.6049,-0.206,0.0989,2.9822,2.7089
+Own-patch (BB01–09),yolov8s,11.2M,0.8904,0.7448,-0.1456,0.0377,3.7044,0.8556
+Own-patch (BB01–09),yolov5n,1.9M,0.8613,0.6675,-0.1938,0.0863,3.3756,1.1311
+Own-patch (BB01–09),rtdetr,32.8M,0.6695,0.564,-0.1055,0.0603,4.3756,2.9044

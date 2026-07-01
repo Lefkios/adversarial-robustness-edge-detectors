@@ -1,0 +1,27 @@
+# Core
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics>=8.0.0
+
+# Patch optimisation
+kornia>=0.7.0
+
+# Image / data
+opencv-python>=4.8.0
+Pillow>=10.0.0
+numpy>=1.24.0
+pandas>=2.0.0
+PyYAML>=6.0
+
+# Evaluation
+pycocotools>=2.0.6
+
+# Training utilities
+tqdm>=4.65.0
+tensorboard>=2.13.0
+matplotlib>=3.7.0
+
+# NanoDet-Plus — install from source:
+#   git clone https://github.com/RangiLyu/nanodet.git
+#   cd nanodet && pip install -e . --no-deps
+#   pip install pytorch-lightning==1.9.5

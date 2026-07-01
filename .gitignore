@@ -1,0 +1,58 @@
+# Model weights — too large for git (use weights/README.md for locations)
+*.pt
+*.pth
+*.onnx
+*.engine
+*.trt
+
+# Archives and large datasets
+*.zip
+*.tar.gz
+*.tar
+*.gz
+
+# Bulk image data (datasets stay on Drive)
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+*.mp4
+*.avi
+
+# Exceptions: keep thesis result figures and patch visualisations
+!results/figures/*.png
+!results/media/patches/*.png
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.so
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Environment
+.env
+.venv/
+env/
+venv/
+
+# macOS
+.DS_Store
+*.DS_Store
+
+# Colab / Drive artifacts
+*.gdoc
+*.gsheet
+*.gslides
+drive/
+
+# Large result directories that stay on Drive
+paper_runs/
+paper_runs_all_models/
+results/logs/patch1_cross_scenario_transfer_*/

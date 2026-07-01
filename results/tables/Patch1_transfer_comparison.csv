@@ -1,0 +1,5 @@
+exp,model,params,clean_mAP50,patch_mAP50,delta_mean,delta_std,clean_fp05,patch_fp05
+Patch1 transfer (BB02–09),yolov8n,3.2M,0.7998,0.6563,-0.1435,0.0825,3.0075,9.1525
+Patch1 transfer (BB02–09),yolov8s,11.2M,0.8835,0.7521,-0.1314,0.0521,3.7625,0.3575
+Patch1 transfer (BB02–09),yolov5n,1.9M,0.852,0.6843,-0.1677,0.0631,3.4075,0.49
+Patch1 transfer (BB02–09),rtdetr,32.8M,0.6756,0.5714,-0.1042,0.0685,4.4675,3.525
