@@ -132,6 +132,14 @@ See [`weights/README.md`](weights/README.md) for full details.
 
 ---
 
+## Attack Pipeline
+
+![Patch optimisation pipeline](results/figures/patch_pipeline.png)
+
+The learnable patch is optimised end-to-end: EOT transformations (scale, rotation, lighting, blur) are applied to the patch, which is composited onto billboard scenes and passed through YOLOv8n. The overload attack loss (Top-K confidence + threshold reward) drives a patch update via Adam; this loop repeats for 250 iterations across 3 seeds.
+
+---
+
 ## Adversarial Patches
 
 Patches are 80×80 RGB float32 tensors, optimised using EOT (Expectation over Transformation) with Adam (lr=0.03, 250 iterations, 3 seeds). Best patch = lowest training loss across seeds.
