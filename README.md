@@ -29,7 +29,7 @@ The core question: *can a small, printed adversarial patch fool an object detect
 | RT-DETR-L (transfer) | ResNet-50-D | 32.0 M | 90.4% | 67.8% | −22.6 pp | 0.43 | 0.98 |
 | NanoDet-Plus (transfer) | ShuffleNetV2 | 1.8 M | ~68% | ~61% | ~−7 pp | — | — |
 
-Full per-scenario breakdown: [`results/tables/adversarial_robustness_final.xlsx`](results/tables/adversarial_robustness_final.xlsx)
+Full per-scenario breakdown: [`results/summary/adversarial_robustness_final.xlsx`](results/summary/adversarial_robustness_final.xlsx)
 
 ### Cross-scenario transfer — Patch1 (trained on billboard01 only)
 
@@ -56,7 +56,7 @@ YOLOv8n is most vulnerable to transfer: billboard04 drops from 90.3% to 24.4% (�
 | Bit-depth reduction | b=7 | 77.9% | 58.6% | −19.3 pp | 1.62 |
 | **LGS** | σ=1.5 | **71.2%** | **60.3% (+1.6 pp)** | **−6.6 pp** | **0.16** |
 
-Full defence results (all models, all scenarios): [`results/tables/defense_evaluation_v3.xlsx`](results/tables/defense_evaluation_v3.xlsx)
+Full defence results (all models, all scenarios): [`results/summary/defense_evaluation_v3.xlsx`](results/summary/defense_evaluation_v3.xlsx)
 
 **LGS reduces FP/img at τ=0.001 by 37.86 on YOLOv8n** while slightly improving patched mAP50 (58.6% → 60.3%).  
 Gaussian and median blur hurt clean accuracy significantly. JPEG and bit-depth reduction have essentially no effect at the parameters tested.
@@ -88,8 +88,9 @@ notebooks/
   5_analysis/         Thesis figures, presentation plots, FP demo grids
 
 results/
+  summary/            Canonical XLSX result files (Tables 6.3–6.25 + Appendix A)
   figures/            fig1–fig8 PNGs + transfer_fp PDFs (thesis figures)
-  tables/             Canonical CSVs and XLSX (Tables 6.3–6.25 + Appendix A)
+  tables/             Per-model/per-scenario CSV breakdowns
   logs/               Raw JSON eval logs per model × scenario × defence
   media/patches/      Adversarial patch visualisations (bill1.png, etc.)
 
