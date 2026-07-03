@@ -225,21 +225,6 @@ notebooks/5_analysis/thesis_defense_analysis.ipynb    Deep dive for viva
 
 5. **Domain generalisation is partial.** The patch degrades Nova Carter detection by 16 pp (digital overlay). Real-world physical placement effects remain an open question.
 
----
-
-## Citation
-
-If you use this code or results, please cite:
-
-```bibtex
-@thesis{mavroudi2026adversarial,
-  author  = {Lefkios Mavroudi},
-  title   = {Adversarial Robustness of Edge-Deployed Object Detectors in Mobile Robotics},
-  school  = {University of Cyprus},
-  year    = {2026},
-  type    = {BEng Thesis}
-}
-```
 
 ---
 
