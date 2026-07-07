@@ -4,6 +4,7 @@
 **Institution:** University of Cyprus — Department of Electrical and Computer Engineering  
 **Supervisors:** Theocharis Theocharides, Antonis Savva  
 **Degree:** BEng Electrical and Computer Engineering, 2025–2026
+**Year:** 2026
 
 ---
 
