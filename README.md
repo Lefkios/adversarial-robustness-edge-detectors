@@ -99,6 +99,50 @@ patches/README.md     Pointers to adversarial patch tensors (stay on Drive)
 data/README.md        Pointers to all three datasets (stay on Drive)
 ```
 
+### Notebooks
+
+| Notebook | What it does |
+|----------|-------------|
+| `0_data_prep/CarlaGear.ipynb` | Parses CARLA-GeAR XML annotations → YOLO label format |
+| `0_data_prep/DatasetSanityCheck.ipynb` | Validates image–label alignment across all 9 billboard splits |
+| `0_data_prep/IsaacDatasetToYolo.ipynb` | Converts Isaac Sim dataset to YOLO format |
+| `1_training/yolo_multifolder_training.ipynb` | Fine-tunes YOLOv8n on all 9 billboard scenarios |
+| `1_training/yolov8s-Yolov5n-NanoDetPlus(Training).ipynb` | Fine-tunes YOLOv8s, YOLOv5n, and NanoDet-Plus |
+| `1_training/rtdetr_training_eval.ipynb` | Fine-tunes and evaluates RT-DETR-L |
+| `1_training/yolov8n_IsaacSim.ipynb` | Trains domain-specific YOLOv8n for Isaac Sim warehouse |
+| `2_attacks/Yolo_Patch_Opt.ipynb` | **Primary attack** — EOT patch optimisation against YOLOv8n; generates Patch1 |
+| `2_attacks/Isaac_patch.ipynb` | EOT patch for Isaac Sim digital overlay |
+| `2_attacks/nova_realworld_patch_2nd.ipynb` | EOT patch for Nova Carter real-world scenes |
+| `3_eval/unified_evaluation_ver2.ipynb` | Cross-scenario, cross-model evaluation on CARLA-GeAR (Tables 6.3–6.9) |
+| `3_eval/nova_eval.ipynb` | Evaluation on Nova Carter dataset (Tables 6.10–6.15) |
+| `4_defence/Defense_Evaluation_Final.ipynb` | Gaussian blur, median filter, JPEG, bit-depth reduction (Tables 6.16–6.17) |
+| `4_defence/defense_held_out_eval.ipynb` | Defence evaluation on held-out billboard04–09 (Tables 6.23–6.25) |
+| `4_defence/Patch_Defense.ipynb` | PatchBlock chunk-based defence (Tables 6.19–6.20) |
+| `4_defence/soda_thesis_figures.ipynb` | SODA preprocessing latency and Figure 6.20 |
+| `5_analysis/Thesis_Plots.ipynb` | Generates fig1–fig8 (all thesis figures) |
+| `5_analysis/thesis_defense_analysis.ipynb` | Deep-dive analysis prepared for viva |
+| `5_analysis/PRESENTATIONplots.ipynb` | Generates plots for the thesis presentation |
+| `5_analysis/isaac_fp_demo_minimal.ipynb` | FP flooding demo grids for Isaac Sim (Fig 6.12) |
+
+### Figures (`results/figures/`)
+
+| File | Description |
+|------|-------------|
+| `fig1_clean_vs_patched_mAP50.png` | Bar chart — clean vs patched mAP50 for all 5 models |
+| `fig2_delta_mAP50_heatmap.png` | Heatmap — ΔmAP50 across models × billboard scenarios |
+| `fig3_detection_density.png` | FP/img (detection density) under attack per scenario |
+| `fig4_own_vs_transfer_delta_mAP50.png` | Own-patch vs Patch1 transfer ΔmAP50 comparison |
+| `fig5_transfer_delta_per_scenario.png` | Per-scenario ΔmAP50 for Patch1 transfer (all models) |
+| `fig6_radar_robustness.png` | Radar chart — multi-axis robustness profile per model |
+| `fig7_robustness_vs_model_size.png` | Scatter — ΔmAP50 vs model parameter count |
+| `fig8_FP_increase_per_scenario.png` | FP/img increase per scenario under Patch1 |
+| `patch_pipeline.png` | EOT patch optimisation pipeline diagram |
+| `scene_clean.png` | Example clean billboard scene with detections |
+| `scene_patched.png` | Same scene with adversarial patch applied |
+| `defence_tradeoff.png` | Defence accuracy–FP tradeoff scatter plot |
+| `transfer_fp_conf03.pdf` | FP/img at τ=0.3 across scenarios (Patch1 transfer) |
+| `transfer_fp_conf05.pdf` | FP/img at τ=0.5 across scenarios (Patch1 transfer) |
+
 ---
 
 ## Datasets
